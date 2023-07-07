@@ -1,0 +1,29 @@
+@media (max-width:1024px){
+    .sections-container{
+        width: 325px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "img"
+        "content";
+    }
+    .img{
+        grid-area: img;
+    }
+    .content{
+        padding: 1.7rem;
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content>h1{
+        text-align: center;
+        font-size: 1.75rem;
+    }
+    .content .description{
+        text-align: center;
+    }
+    .content>div{
+        text-align: center;
+    }
+}

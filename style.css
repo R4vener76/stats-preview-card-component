@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+:root{
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    --Soft-violet: hsl(277, 64%, 61%);
+    --Soft-violet-img: hsla(277, 64%, 61%, 0.7);
+    --White: hsl(0, 0%, 100%);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-dark-blue);
+    color: var(--White);
+    font-family: 'Inter', sans-serif;
+}
+
+.card{
+    margin: 2rem;
+}
+.sections-container{
+    background-color: var(--Dark-desaturated-blue);
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    max-width: 980px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.content{
+    padding: 2.5rem 4rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas:
+    "header header header"
+    "description description description"
+    "companies templates queries";
+    align-content: center;
+    row-gap: 2rem;
+}
+
+h1{
+    grid-area: header;
+    font-size: 2rem;
+    font-weight: 700;
+}
+h1>span{
+    color: var(--Soft-violet);
+}
+.description{
+    grid-area: description;
+    font-size: 0.9rem;
+    color: var(--Slightly-transparent-white);
+    margin-top: -1rem;
+    font-weight: 400;
+    font-size: 0.937rem;
+    line-height: 1.5rem;
+}
+.companies{
+    grid-area: companies;
+}
+.templates{
+    grid-area: templates;
+}
+.queries{
+    grid-area: queries;
+}
+
+.content div>h2{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.content div>p{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--Slightly-transparent-white);
+    font-family: 'Lexend Deca', sans-serif;
+
+}
+
+
+.img{
+    position: relative;
+}
+
+.img img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: relative;
+    filter: grayscale(100%);
+}
+
+.img::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--Soft-violet-img);
+    z-index: 1;
+}
+
